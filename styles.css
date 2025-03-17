@@ -3,6 +3,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    background: #333;
 }
 
 header {
@@ -23,19 +24,22 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: #333;
+    color: #fff;
     text-decoration: none;
+    background: #333;
 }
 
 section {
     padding: 2rem;
     margin: 1rem 0;
+    background: #333;
 }
 
 .project {
     border: 1px solid #ddd;
     padding: 1rem;
     margin: 1rem 0;
+    background: #333;
 }
 
 footer {
