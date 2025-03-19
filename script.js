@@ -1,21 +1,40 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const themeToggle = document.getElementById("theme-toggle");
-    const body = document.body;
-    const cards = document.querySelectorAll(".card");
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience - Eduardo Zavala</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
 
-    themeToggle.addEventListener("click", function () {
-        body.classList.toggle("light-mode");
-    });
+    <header>
+        <img src="profile_picture.jpg" alt="Eduardo Zavala" class="profile-pic">
+        <h1>Eduardo Zavala</h1>
+        <p>Las Vegas, NV | Bilingual | <a href="mailto:ezavala15@icloud.com">ezavala15@icloud.com</a></p>
+    </header>
 
-    function toggleCards() {
-        cards.forEach(card => {
-            const cardPosition = card.getBoundingClientRect().top;
-            const screenPosition = window.innerHeight / 1.3;
-            if (cardPosition < screenPosition) { card.classList.add("visible"); card.classList.remove("hidden"); } 
-            else { card.classList.add("hidden"); card.classList.remove("visible"); }
-        });
-    }
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="experience.html">Experience</a>
+        <a href="education.html">Education</a>
+        <a href="contact.html">Contact Me</a>
+    </nav>
 
-    window.addEventListener("scroll", toggleCards);
-    toggleCards();
-});
+    <section id="experience">
+        <h2>Relevant Experience</h2>
+        <div class="card"><h3>CIT 129 Python | College of Southern Nevada</h3>
+            <ul><li>Actively learning Python</li><li>Using arrays & loops</li></ul></div>
+        <div class="card"><h3>Customer Service | Sam’s Club</h3>
+            <ul><li>Helped members troubleshoot issues</li><li>Cashiering duties</li></ul></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Eduardo Zavala | <a href="mailto:ezavala15@icloud.com">Contact Me</a></p>
+    </footer>
+
+</body>
+</html>
