@@ -6,6 +6,57 @@
     <title>Eduardo Zavala - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header img {
+            width: 100px;
+            border-radius: 50%;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 20px;
+        }
+        .card {
+            background-color: #222;
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
 </head>
 <body>
 
@@ -18,16 +69,30 @@
 
     <!-- Navigation Bar -->
     <nav>
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="experience.html">Experience</a>
-        <a href="education.html">Education</a>
-        <a href="contact.html">Contact Me</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact Me</a>
     </nav>
 
-    <section id="about">
-        <h2>Welcome to My Portfolio</h2>
-        <p>Explore my work and experience through the sections above!</p>
+    <section id="experience">
+        <h2>Relevant Experience</h2>
+        <div class="card"><h3>CIT 129 Python | College of Southern Nevada</h3>
+            <ul><li>Actively learning Python</li><li>Using arrays & loops</li></ul></div>
+        <div class="card"><h3>Customer Service | Sam’s Club</h3>
+            <ul><li>Helped members troubleshoot issues</li><li>Cashiering duties</li></ul></div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="card"><h3>List of Numbers - Creator</h3>
+            <ul><li>Lists numbers & categorizes as even/odd</li></ul></div>
+        <div class="card"><h3>Employee Report - Creator</h3>
+            <ul><li>Calculates pay, validates input</li></ul></div>
+    </section>
+
+    <section id="education"><h2>Education</h2>
+        <div class="card"><p><strong>College of Southern Nevada</strong> | CS Major (Est. 2027)</p></div>
     </section>
 
     <footer>
