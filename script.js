@@ -1,40 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experience - Eduardo Zavala</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
-</head>
-<body>
+// Dark/Light Mode Toggle Functionality
+const themeToggleButton = document.getElementById("theme-toggle");
 
-    <header>
-        <img src="profile_picture.jpg" alt="Eduardo Zavala" class="profile-pic">
-        <h1>Eduardo Zavala</h1>
-        <p>Las Vegas, NV | Bilingual | <a href="mailto:ezavala15@icloud.com">ezavala15@icloud.com</a></p>
-    </header>
+// Check for saved theme preference in localStorage
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme) {
+    document.body.classList.toggle("dark-mode", savedTheme === "dark");
+}
 
-    <!-- Navigation Bar -->
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="experience.html">Experience</a>
-        <a href="education.html">Education</a>
-        <a href="contact.html">Contact Me</a>
-    </nav>
+// Toggle the theme
+themeToggleButton.addEventListener("click", () => {
+    const currentTheme = document.body.classList.contains("dark-mode") ? "dark" : "light";
+    const newTheme = currentTheme === "dark" ? "light" : "dark";
 
-    <section id="experience">
-        <h2>Relevant Experience</h2>
-        <div class="card"><h3>CIT 129 Python | College of Southern Nevada</h3>
-            <ul><li>Actively learning Python</li><li>Using arrays & loops</li></ul></div>
-        <div class="card"><h3>Customer Service | Sam’s Club</h3>
-            <ul><li>Helped members troubleshoot issues</li><li>Cashiering duties</li></ul></div>
-    </section>
+    document.body.classList.toggle("dark-mode", newTheme === "dark");
+    localStorage.setItem("theme", newTheme); // Save the user's theme preference
+});
 
-    <footer>
-        <p>&copy; 2025 Eduardo Zavala | <a href="mailto:ezavala15@icloud.com">Contact Me</a></p>
-    </footer>
+// Project Card Hover Effect (Optional)
+const projectCards = document.querySelectorAll('.card');
 
-</body>
-</html>
+projectCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        card.style.transform = 'scale(1.05)';
+    });
+
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = 'scale(1)';
+    });
+});
